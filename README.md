@@ -1,96 +1,64 @@
-# ShopWave 🌊 — Mini E-Commerce App
+<div align="center">
 
-ShopWave is a modern, responsive, and feature-rich React e-commerce web application. It integrates the [Fake Store API](https://fakestoreapi.com/) to fetch, display, and interact with products, providing users with a premium online shopping experience.
+  ![Capsule Header](https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,100:EC4899&height=180&section=header&text=Mini%20E-Commerce%20Storefront&fontSize=40&animation=twinkling&desc=Responsive%20React.js%20%26%20Tailwind%20CSS%20Shopping%20Platform)
 
-Built with **React**, **Vite**, and **Tailwind CSS**, it features a fully responsive layout, dynamic dark/light theme switching, cart management, wishlist storage, and a smooth checkout flow.
+  <br/>
+
+  [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38BDF8?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+
+</div>
+
+<br/>
+
+## 🛍️ Overview
+
+**Mini-Ecommerce** is a responsive e-commerce web storefront built with **React.js**, **Tailwind CSS**, and **Vite**. It features product category filters, a dynamic shopping cart drawer, wishlist persistence, toast notifications, and checkout flow simulation.
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-- 🛍️ **API-Driven Catalog**: Real-time product fetching from the Fake Store API.
-- 🌓 **Dynamic Dark Mode**: Seamless dark and light theme switching with system preference detection.
-- 🛒 **Interactive Shopping Cart**: Add/remove products, adjust quantities, and manage items in a sliding sidebar cart.
-- ❤️ **Favorites / Wishlist**: Save items for later with persistent favorites/wishlist context.
-- 🔍 **Category Filters**: Filter products instantly using categories like Electronics, Jewelery, Men's Clothing, and Women's Clothing.
-- ⚡ **Lightning Fast HMR**: Developed using Vite for instant browser hot-reloading.
-- 💳 **Checkout Flow**: Complete user checkout page with input validations and success feedback.
-- 🍞 **Toast Notifications**: Interactive popup notifications for user actions (adding to cart, wishlist, etc.).
+- 🛒 **Interactive Cart & Wishlist**: Global state context managing real-time item quantity counters and total calculation.
+- 🎨 **Responsive UI & Themes**: Tailwind CSS styled layout with dark/light mode context.
+- 🔍 **Filtering & Search**: Category filtering, product search, and skeleton loading cards.
+- 💳 **Checkout Workflow**: Multi-step checkout modal with address & payment validation.
 
 ---
 
-## 📁 Project Structure
+## 🛠️ Project Structure
 
-Below is the directory layout of the ShopWave codebase:
-
-```text
-mini-ecommerce/
-├── public/                  # Static assets accessible directly
-└── src/
-    ├── assets/              # App images and logo assets (Vite logo, Hero, etc.)
-    ├── components/          # Reusable UI components
-    │   ├── CartSidebar.jsx  # Slide-out shopping cart sidebar
-    │   ├── CategoryBar.jsx  # Horizontal scrollable category icons list
-    │   ├── CategoryFilter.jsx # Sidebar filters for category selection
-    │   ├── CheckoutModal.jsx # Order confirmation and success summary
-    │   ├── Hero.jsx         # Beautiful landing page hero banner
-    │   ├── Navbar.jsx       # Main navigation header with theme/cart/wishlist links
-    │   ├── ProductCard.jsx  # Individual product display card (Hover effects, wishlist button)
-    │   ├── ProductGrid.jsx  # Responsive grid rendering list of products
-    │   ├── SkeletonCard.jsx # Loading placeholder grid cards
-    │   └── StarRating.jsx   # Numerical to graphical star converter
-    ├── context/             # Global states / React Context Providers
-    │   ├── CartContext.jsx  # Shopping cart state provider
-    │   ├── ThemeContext.jsx # Light/dark mode state provider
-    │   ├── ToastContext.jsx # Notification alert state provider
-    │   └── WishlistContext.jsx # Wishlist/Favorites state provider
-    ├── hooks/               # Custom React hooks
-    │   ├── useProducts.js   # Fetches and filters products from Fake Store API
-    │   └── useTheme.js      # Clean shortcut to ThemeContext
-    ├── pages/               # Layout pages resolved by React Router
-    │   ├── CheckoutPage.jsx # Checkout form & billing info
-    │   ├── HomePage.jsx     # Main storefront page
-    │   ├── ProductDetailPage.jsx # Individual detailed product view
-    │   └── WishlistPage.jsx # Favorites listing page
-    ├── App.css              # Custom global styles and Tailwind custom styles
-    ├── App.jsx              # Main routing and provider wrapper
-    ├── index.css            # Base Tailwind directive imports
-    └── main.jsx             # React DOM root render entrypoint
+```
+Mini-Ecommerce/
+├── public/                 # Static SVG icons & favicon
+├── src/
+│   ├── components/         # CartSidebar, ProductGrid, Navbar, CheckoutModal
+│   ├── context/            # CartContext, ThemeContext, WishlistContext, ToastContext
+│   ├── hooks/              # Custom hooks (useProducts, useTheme)
+│   └── pages/              # HomePage, ProductDetailPage, CheckoutPage, WishlistPage
+├── package.json
+└── README.md
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
+```bash
+# Clone the repository
+git clone https://github.com/AahelGupta/Mini-Ecommerce.git
 
-Make sure you have [Node.js](https://nodejs.org/) (v16.0 or higher) installed on your machine.
+# Install dependencies
+npm install
 
-### Installation
-
-1. Navigate to the project directory:
-   ```bash
-   cd mini-ecommerce
-   ```
-
-2. Install the project dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Run the local development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
+# Start development server
+npm run dev
+```
 
 ---
 
-## 🛠️ Tech Stack & Libraries
+## 📄 License
 
-- **Framework**: [React 18](https://react.dev/)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) & PostCSS
-- **Routing**: [React Router DOM v6](https://reactrouter.com/)
-- **Data Source**: [Fake Store API](https://fakestoreapi.com/)
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
