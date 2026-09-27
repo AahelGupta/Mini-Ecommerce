@@ -1,6 +1,6 @@
 <div align="center">
 
-  ![Capsule Header](https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,100:EC4899&height=180&section=header&text=Mini%20E-Commerce%20Storefront&fontSize=40&animation=twinkling&desc=Responsive%20React.js%20%26%20Tailwind%20CSS%20Shopping%20Platform)
+  ![Capsule Header](https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,100:EC4899&height=180&section=header&text=Mini%20Ecommerce%20Storefront&fontSize=42&animation=twinkling&desc=Responsive%20React.js%20and%20Tailwind%20CSS%20Shopping%20Platform)
 
   <br/>
 
